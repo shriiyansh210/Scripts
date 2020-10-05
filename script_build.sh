@@ -42,6 +42,10 @@ wait
 echo -e ${grn}"CCACHE Cleared"${txtrst};
 fi
 
+# Build ROM
+source build/envsetup.sh
+lunch "$lunch_command"_"$device_codename"-"$build_type"
+
 # Its Clean Time
 if [ "$make_clean" = "yes" ];
 then
@@ -58,7 +62,4 @@ wait
 echo -e ${cya}"Images deleted from OUT dir"${txtrst};
 fi
 
-# Build ROM
-source build/envsetup.sh
-lunch "$lunch_command"_"$device_codename"-"$build_type"
 make "$target_command" -j"$jobs"
