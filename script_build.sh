@@ -9,7 +9,7 @@
 # Some User's Details. Please fill it with your own details.
 
 # Replace "legacy" with your own SSH Username in lowercase
-username=pulkit
+username=shriiyansh
 
 # Colors makes things beautiful
 export TERM=xterm
